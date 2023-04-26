@@ -90,7 +90,8 @@ class AnimeBase:
               ['Demon Slayer', 'Jujutsu Kaisen', 'Dororo', 'To Your Eternity', 'Chainsaw Man'],
               ['One Piece', 'Naruto', 'Dragon Ball Z', 'Hunter x Hunter', 'Fullmetal Alchemist',
                "JoJo's Bizarre Adventure", 'Tower of God', 'Bleach'],
-              ['Tokyo Revengers', 'Steins;Gate', 'ERASED', 'Re:ZERO -Starting Life in Another World-']],
+              ['Tokyo Revengers', 'Steins;Gate', 'ERASED', 'Re:ZERO -Starting Life in Another World-',
+               'Baki the Grapple']],
     comedy = [['Spy x Family', 'Hinamatsuri', 'Kakushigoto', 'Barakamon']]
     cyberpunk = [
         ['Psycho-Pass', 'Terror in Resonance', 'ID: INVADED', 'Ghost in the Shell: Stand Alone Complex',
@@ -421,42 +422,42 @@ async def dark_fantasy(update, context):
 
 async def heroic(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[0])
+    lst = '\n'.join(db.senens[0][0])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
 
 async def schools(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[1])
+    lst = '\n'.join(db.senens[0][1])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
 
 async def severe_world(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[2])
+    lst = '\n'.join(db.senens[0][2])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
 
 async def new(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[3])
+    lst = '\n'.join(db.senens[0][3])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
 
 async def well_known(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[4])
+    lst = '\n'.join(db.senens[0][4])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
 
 async def fights(update, context):
     db = AnimeBase
-    lst = '\n'.join(db.senens[5])
+    lst = '\n'.join(db.senens[0][5])
     await update.message.reply_text(f"{lst}\nHope you found what you were looking for!",
                                     reply_markup=ReplyKeyboardRemove())
 
